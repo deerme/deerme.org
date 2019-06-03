@@ -1,0 +1,27 @@
+Transaccion response = new Transaccion();
+    	
+    	Nat_respuesta respuesta = new Nat_respuesta();
+		Nat_persona respuesta_persona = new Nat_persona();
+		
+		respuesta_persona.setArgumento("123");
+		respuesta_persona.setCantidad("1");
+		respuesta_persona.setTipo("tipo");
+		Nat[] personas = new Nat[1];
+		personas[0] = new Nat();
+		personas[0].setNombre("JUAN PEREZ");
+		personas[0].setRut("1");
+		personas[0].setTipo("P");
+		personas[0].setPorcentaje("10");
+		personas[0].setGrupo("AAA");
+		personas[0].setExtracto("AAAAA");		
+		
+		respuesta_persona.setNat(personas );		
+		respuesta.setNat_persona(respuesta_persona);
+		
+		Trx trx = new Trx();
+		Errors error = new Errors();
+		error.setCodigo_error("0");
+		error.setDescripcion_error("Exitosa");
+		trx.setError(error );
+		response.setTrx(trx );
+		response.setNat_respuesta(respuesta );
